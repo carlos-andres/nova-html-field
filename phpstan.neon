@@ -1,0 +1,13 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - src
+    level: 5
+    ignoreErrors:
+        # Nova classes are only available when installed via Nova subscription
+        - identifier: class.notFound
+        - identifier: class.noParent
+        - identifier: method.notFound
+        - identifier: property.notFound
